@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender con Aidan - Burlington Spanish Lessons</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="home" class="header">
+    <nav>
+        <a href="#home"><img src="images/logo.png"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#courses">COURSES</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home-content">
+        <h1>¡Hola, me llamo Aidan!</h1>
+        <p>
+            I am a Spanish language tutor who is passionate about teaching and learning languages. 
+            I have multiple years of experience as a Spanish tutor at Middlebury College 
+            as well as first hand experience reaching fluency in Spanish! 
+            This summer I am offering private or group Spanish lessons in Burlington, VT for all levels of learners. 
+            If you are interested in improving your Spanish conversational skills or are looking to begin your Spanish journey, 
+            contact me to set up a session!
+        </p>
+        <div class="button-box">
+            <a href="#about">Learn More</a>
+            <a href="#courses">Book Session</a>
+        </div>
+    </div>
+</header>
+<section id="about" class="about">
+    <div class="about-content">
+        <div class="about-info">
+            <img src="images/profile_pic.png" class="rounded">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>
+                    My name is Aidan McMillan and I'm currently a student at Middlebury College in Vermont. This summer of 2023 I am living in Burlington
+                    and offering private and group Spanish lessons to any level of learner! During the school year, I work as a Spanish tutor with the college, furthermore
+                    I volunteer weekly as a medical interpreter for migrant workers in Addison county. <br><br> After various years learning French in school, I found myself frustrated
+                    with the way languages were taught in  public school. After researching methods to better learn languages, I decided I would learn Spanish on my own.
+                    I was suprised that after a few months of this new method of maximum immersion, I could already hold a decent conversation in the language.
+                    I soon fell in love with the language and after meeting a language exchange parter from Colombia, picked up the Colombian dialect and idioms. Last year, I studied
+                    abroad in Colombia and further deepend my cultural knowledge! Language is like a key that opens you to a whole new world of culture and ideas.
+                    I hope that my methods of teaching and learning can be <b>your</b> key to that world!
+                </p>
+            </div>
+        </div>
+        <div class="about-gallery">
+            <img src="images/gallery1.jpg" class="gallery">
+            <img src="images/gallery2.jpg" class="gallery">
+            <img src="images/gallery3.jpg" class="gallery">
+        </div>
+    </div>
+</section>
+<section id="courses" class="courses">
+    <div class="courses-content">
+        <div class="courses-info">
+            <h1>Courses</h1>
+            <h2>Level 1: Principiante</h2>
+            <p>
+                This level is for beginers. In these lessons we will go over the basics of pronounciation and build basic grammar by memorizing
+                the most frequently used words. We will work through the basic sentance structer and grammar including simple verb conjugations and gender agreement.
+            </p>
+            <h2>Level 2: Intermedio</h2>
+            <p>
+                This level is for intermediate learners. In these lessons we will work to improve pronunciation and build up a more complex and robust
+                set of vocab through conversation, learning more specialized terms based on your topics of interest. We will work on more complex grammar 
+                including subjunctive, preterite/imperfect and more.
+            </p>
+            <h2>Level 3: Avanzado</h2>
+            <p>
+                This level is for the more advanced learners. These lessons will very conversation heavy, as conversation is a huge key to reaching fluency. I will explain errors or new 
+                concepts as they arise. These lessons are for those who have the fundamentals down and are looking to bring their Spanish to the next level.
+            </p>
+            <h3>All lessons are 1hr long. Each lesson is 25$ plus 10$ for each extra person added if you wish to do a group lesson.</h3>
+        </div>
+        <div class="button-box">
+            <a href="https://forms.gle/k8jC5A2Je27fJfeM6" target=”_blank”>Book Session</a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="contact">
+        <a href="http://instagram.com/_u/aidmmcmillan/" target=”_blank”><img src="images/insta.png"></a>
+        <a href="https://facebook.com/aidan.mcmillan.965/" target=”_blank”><img src="images/fb.png"></a>
+    </div>
+    <p>Author and images by: Aidn McMillan<br>
+    Email: <a href="mailto:aidmmcmillan@gmail.com">aidmmcmillan@gmail.com</a><br>
+    Phone: <a href="tel:8607597424">(860)759-7424</a></p>
+</footer>
+
+<script>
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+ 
+ for (let item of anchorlinks) { // relitere 
+     item.addEventListener('click', (e)=> {
+         let hashval = item.getAttribute('href')
+         let target = document.querySelector(hashval)
+         target.scrollIntoView({
+             behavior: 'smooth',
+             block: 'start'
+         })
+         history.pushState(null, null, hashval)
+         e.preventDefault()
+     })
+}
+
+
+</script>
+
+</body>
+</html>
