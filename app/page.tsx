@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 export default function HomePage() {
@@ -12,19 +10,21 @@ export default function HomePage() {
       >
         {/* HERO CONTENT */}
         <div className="w-full px-[7.5%] pb-10 pt-10">
-          <div className="max-w-xl text-white">
-            <h1 className="text-3xl md:text-4xl font-semibold">
+          <div className="max-w-4xl text-white">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
               ¡Hola, me llamo Aidan!
             </h1>
-            <p className="mt-5 mb-10 text-base md:text-lg font-light leading-relaxed">
-              I am a Spanish language tutor who is passionate about teaching and
-              learning languages. I have multiple years of experience as a
-              Spanish tutor at Middlebury College as well as first hand
-              experience reaching fluency in Spanish! This summer I am offering
-              private or group Spanish lessons in Burlington, VT for all levels
-              of learners. If you are interested in improving your Spanish
-              conversational skills or are looking to begin your Spanish
-              journey, contact me to set up a session!
+            <p className="mt-4 text-lg md:text-2xl font-medium">
+              Private &amp; group Spanish lessons for every level.
+            </p>
+            <p className="mt-4 mb-10 text-base md:text-lg font-light leading-relaxed text-white/85">
+              Want to finally charm your partner&apos;s family at dinner? Joke
+              around with your coworkers? Actually understand the Bad Bunny
+              song you&apos;ve been singing along to, or get lost in the magical
+              realism of García Márquez the way he wrote it?{" "}
+              <span className="font-semibold text-white">
+                Spanish opens all of it up to you. Let&apos;s get you there.
+              </span>
             </p>
 
             <div className="flex h-12 w-[300px] md:w-[345px] items-center justify-between gap-4">
@@ -37,13 +37,15 @@ export default function HomePage() {
                   text-sm md:text-lg font-semibold tracking-wide text-white
                   transition-all duration-300
                   backdrop-blur-[0px]
-                  hover:backdrop-blur-[33px]
+                  hover:backdrop-blur-[3px]
                 "
               >
                 Learn More
               </a>
               <a
-                href="#courses"
+                href="https://forms.gle/k8jC5A2Je27fJfeM6"
+                target="_blank"
+                rel="noreferrer"
                 className="
                   inline-flex h-full w-[140px] md:w-[150px]
                   items-center justify-center
@@ -67,8 +69,8 @@ export default function HomePage() {
         className="scroll-mt-18 md:scroll-mt-26 flex w-full items-center justify-center bg-white"
       >
         <div className="w-[85%] py-14 text-slate-900">
-          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
-            <div className="flex justify-center md:flex-shrink-0 md:w-[300px] md:h-[300px]">
+          <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center">
+            <div className="flex justify-center lg:flex-shrink-0 lg:w-[300px] lg:h-[300px]">
               <Image
                 src="/images/profile_pic.png"
                 alt="Aidan McMillan"
@@ -78,17 +80,18 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="md:pl-12 text-center md:text-left">
+            <div className="lg:pl-12 text-center lg:text-left">
               <h1 className="text-3xl md:text-[55px] font-semibold">
                 About Me
               </h1>
               <p className="mt-4 text-sm md:text-base font-light leading-relaxed md:pr-4">
-                My name is Aidan McMillan and I&apos;m currently a student at
-                Middlebury College in Vermont. This summer of 2023 I am living
-                in Burlington and offering private and group Spanish lessons to
-                any level of learner! During the school year, I work as a
-                Spanish tutor with the college, furthermore I volunteer weekly
-                as a medical interpreter for migrant workers in Addison county.
+                My name is Aidan McMillan and I offer private and group Spanish
+                lessons to any level of learner! I&apos;m a Middlebury College
+                graduate now living in New York City. At Middlebury, I worked
+                as a Spanish tutor with the college and volunteered weekly as a
+                medical interpreter for migrant workers in Addison County.
+                I also spent a year working at Literacy Volunteers
+                in New Britain, CT.
                 <br />
                 <br />
                 After various years learning French in school, I found myself
@@ -98,9 +101,9 @@ export default function HomePage() {
                 months of this new method of maximum immersion, I could already
                 hold a decent conversation in the language. I soon fell in love
                 with the language and after meeting a language exchange partner
-                from Colombia, picked up the Colombian dialect and idioms. Last
-                year, I studied abroad in Colombia and further deepened my
-                cultural knowledge! Language is like a key that opens you to a
+                from Colombia, picked up the Colombian dialect and idioms. I
+                later studied abroad in Colombia and have been back many times
+                since, further deepening my cultural knowledge! Language is like a key that opens you to a
                 whole new world of culture and ideas. I hope that my methods of
                 teaching and learning can be <b>your</b> key to that world!
               </p>
@@ -187,10 +190,18 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <h3 className="pt-4 text-base md:text-lg font-medium">
-                All lessons are 1hr long. Each lesson is 25$ plus 10$ for each
-                extra person added if you wish to do a group lesson.
-              </h3>
+              <h2 className="pt-4 text-2xl md:text-[35px] font-semibold">
+                Pricing
+              </h2>
+              <div className="mx-auto mt-2 max-w-md rounded-lg border border-zinc-300 bg-black/20 px-6 py-5 backdrop-blur-[3px]">
+                <p className="text-base md:text-lg font-light leading-relaxed">
+                  All lessons are 1 hour long.
+                  <br />
+                  <span className="font-medium">$25</span> per lesson, plus{" "}
+                  <span className="font-medium">$10</span> for each extra
+                  person in a group lesson.
+                </p>
+              </div>
             </div>
           </div>
 

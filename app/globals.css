@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-*{
-  font-family: 'Geologica', sans-serif;
+@theme inline {
+  --font-sans: var(--font-geologica), sans-serif;
 }
 
 html {
