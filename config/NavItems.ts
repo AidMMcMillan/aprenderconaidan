@@ -1,6 +1,7 @@
 export const navItems = [
-    { href: "/#home", label: "HOME" },
     { href: "/#about", label: "ABOUT" },
+    { href: "/#how-i-teach", label: "HOW I TEACH" },
     { href: "/#lessons", label: "LESSONS" },
-    { href: "/#parents", label: "PARENTS" },
   ] as const;
+
+export const bookingUrl = "https://forms.gle/k8jC5A2Je27fJfeM6";

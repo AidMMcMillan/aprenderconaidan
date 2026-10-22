@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { navItems } from "@/config/NavItems";
+import { bookingUrl, navItems } from "@/config/NavItems";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -188,7 +188,7 @@ function Logo({
       />
       <span
         className={[
-          "font-semibold tracking-wide text-sm md:text-lg transition-colors",
+          "font-semibold tracking-wide text-lg transition-colors",
           variant === "light" ? "text-white" : "text-slate-900",
         ].join(" ")}
       >
@@ -208,7 +208,7 @@ function Menu({
   onNavigate?: () => void;
 }) {
   const linkBase =
-    "text-sm md:text-lg relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all hover:after:w-full";
+    "text-sm md:text-base lg:text-lg relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all hover:after:w-full";
 
   const linkColors =
     variant === "light"
@@ -235,6 +235,23 @@ function Menu({
             </a>
           </li>
         ))}
+        <li>
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={onNavigate}
+            className={[
+              "block w-full rounded-lg border px-3 py-3 text-center text-base font-semibold",
+              variant === "light"
+                ? "border-white text-white hover:bg-white/10"
+                : "border-slate-900 text-slate-900 hover:bg-slate-100",
+              "transition",
+            ].join(" ")}
+          >
+            BOOK
+          </a>
+        </li>
       </ul>
     );
   }
@@ -248,6 +265,21 @@ function Menu({
           </a>
         </li>
       ))}
+      <li>
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noreferrer"
+          className={[
+            "inline-flex items-center rounded-lg border px-4 py-1.5 text-sm md:text-base lg:text-lg font-semibold transition",
+            variant === "light"
+              ? "border-white text-white hover:bg-white/15"
+              : "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white",
+          ].join(" ")}
+        >
+          BOOK
+        </a>
+      </li>
     </ul>
   );
 }

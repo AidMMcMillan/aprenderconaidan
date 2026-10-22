@@ -371,7 +371,7 @@ function Sunburst({ cx, cy, color, bg }: { cx: number; cy: number; color: string
   return (
     <g>
       <ellipse cx={cx} cy={cy} rx="6.5" ry="4.5" fill={color} />
-      {[-60, -30, 0, 30, 60, 90, 120, 150].map((deg) => {
+      {Array.from({ length: 12 }, (_, k) => k * 30).map((deg) => {
         const rad = (deg * Math.PI) / 180;
         return (
           <line

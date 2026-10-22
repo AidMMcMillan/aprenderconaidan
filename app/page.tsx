@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PuertasPaisas from "@/components/PuertasPaisas";
+import { bookingUrl } from "@/config/NavItems";
 
 export default function HomePage() {
   return (
@@ -45,7 +46,7 @@ export default function HomePage() {
                 Learn More
               </a>
               <a
-                href="https://forms.gle/k8jC5A2Je27fJfeM6"
+                href={bookingUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="
@@ -83,9 +84,9 @@ export default function HomePage() {
             </div>
 
             <div className="lg:pl-12 text-center lg:text-left">
-              <h1 className="text-3xl md:text-[55px] font-semibold">
+              <h2 className="text-3xl md:text-[55px] font-semibold">
                 About Me
-              </h1>
+              </h2>
               <p className="mt-4 text-sm md:text-base font-light leading-relaxed md:pr-4">
                 My name is Aidan McMillan and I offer private and group Spanish
                 lessons to any level of learner! I&apos;m a Middlebury College
@@ -116,21 +117,21 @@ export default function HomePage() {
           <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-4 text-center">
             <Image
               src="/images/gallery1.jpg"
-              alt="Spanish learning gallery 1"
+              alt="A statue in a colonial courtyard"
               width={300}
               height={300}
               className="h-60 w-60 object-cover"
             />
             <Image
               src="/images/gallery2.jpg"
-              alt="Spanish learning gallery 2"
+              alt="Fruit piled high at a market stall"
               width={300}
               height={300}
               className="h-60 w-60 object-cover"
             />
             <Image
               src="/images/gallery3.jpg"
-              alt="Spanish learning gallery 3"
+              alt="Cyclists riding down a city street"
               width={300}
               height={300}
               className="h-60 w-60 object-cover"
@@ -157,7 +158,7 @@ export default function HomePage() {
             Every lesson is one-on-one or with your own group, so there&apos;s
             no fixed curriculum to keep up with. The goal isn&apos;t passing a
             class, it&apos;s getting good at the language. When that clicks,
-            everything else follows.
+            everything else follows, including the grades and exam scores.
           </p>
 
           <div className="mt-12 flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-4">
@@ -174,8 +175,9 @@ export default function HomePage() {
                 I tailor a plan
               </h3>
               <p className="mt-2 text-sm md:text-base font-light leading-relaxed">
-                Lessons are built around your level and your goals, whether
-                that&apos;s travel, family, work, music, or school.
+                We set concrete goals together, like getting through a family
+                dinner, a work meeting, or a trip, and build every lesson
+                around your level and those goals.
               </p>
             </div>
             <FlowArrow />
@@ -195,7 +197,7 @@ export default function HomePage() {
       {/* LESSONS SECTION */}
       <section
         id="lessons"
-        className="scroll-mt-18 md:scroll-mt-26 flex min-h-[700px] w-full items-center justify-center bg-[linear-gradient(rgba(4,9,30,0.55),rgba(4,9,30,0.55)),url('/images/banner2.png')] bg-cover bg-center bg-fixed"
+        className="scroll-mt-18 md:scroll-mt-26 flex min-h-[700px] w-full items-center justify-center bg-[linear-gradient(rgba(4,9,30,0.55),rgba(4,9,30,0.55)),url('/images/banner2.png')] bg-cover bg-center md:bg-fixed"
       >
         <div className="w-[85%] max-w-4xl py-14 text-center text-white">
           <div className="mx-auto max-w-3xl">
@@ -204,120 +206,77 @@ export default function HomePage() {
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2 text-left">
-              <div className="rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
+              <div className="flex flex-col rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
                 <h3 className="text-2xl md:text-[28px] font-semibold">
                   Private Lessons
                 </h3>
                 <p className="mt-1 text-lg md:text-xl">
                   <span className="font-semibold">$45</span>{" "}
-                  <span className="font-light">/ 1 hour</span>
+                  <span className="font-light">/ 1 hour in person</span>
+                  <br />
+                  <span className="font-semibold">$35</span>{" "}
+                  <span className="font-light">/ 1 hour online</span>
                 </p>
-                <p className="mt-3 text-sm md:text-base font-light leading-relaxed">
-                  Lessons tailored to you. We start by finding your level and
-                  goals, then build each session around them, from first words
-                  to advanced conversation. Great for students too.
+                <p className="mt-1 text-sm md:text-base font-medium text-[#F6C445]">
+                  First lesson: $20
                 </p>
+                <p className="mt-3 flex-1 text-sm md:text-base font-light leading-relaxed">
+                  The full package, at any level. Each lesson mixes teaching
+                  and drills on grammar and vocab with real conversation
+                  practice, all tailored to your goals. Includes everything in
+                  Conversation Practice. Great for students too.
+                </p>
+                <a
+                  href={bookingUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-lg border border-zinc-300 text-sm md:text-base font-semibold tracking-wide text-white transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-[3px]"
+                >
+                  Book Session
+                </a>
               </div>
-              <div className="rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
+              <div className="flex flex-col rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
                 <h3 className="text-2xl md:text-[28px] font-semibold">
                   Conversation Practice
                 </h3>
                 <p className="mt-1 text-lg md:text-xl">
-                  <span className="font-semibold">$20</span>{" "}
+                  <span className="font-semibold">$15</span>{" "}
                   <span className="font-light">/ 30 minutes</span>
+                  <br />
+                  <span className="font-light">In person or online</span>
                 </p>
-                <p className="mt-3 text-sm md:text-base font-light leading-relaxed">
-                  Just talking. For anyone who already knows some Spanish and
-                  needs more time speaking it. I&apos;ll correct mistakes and
-                  bring in new vocab as it comes up.
+                <p className="mt-1 text-sm md:text-base font-medium text-[#F6C445]">
+                  First session: $10
                 </p>
+                <p className="mt-3 flex-1 text-sm md:text-base font-light leading-relaxed">
+                  Just talking, at any level. As we chat I note new vocab and
+                  corrections, we go over them briefly at the end, and I send
+                  them to you afterward so you can review.
+                </p>
+                <a
+                  href={bookingUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-lg border border-zinc-300 text-sm md:text-base font-semibold tracking-wide text-white transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-[3px]"
+                >
+                  Book Session
+                </a>
               </div>
             </div>
-            <p className="mt-4 text-sm md:text-base font-light">
+            <p className="mt-6 text-sm md:text-base font-light leading-relaxed">
+              Online, or in person in New York City, at your home or a café,
+              wherever works for you.
+              <br />
               Group lessons: add <span className="font-medium">$10</span> for
               each extra person.
             </p>
           </div>
-
-          <div className="mt-10 flex h-12 w-full items-center justify-center">
-            <a
-              href="https://forms.gle/k8jC5A2Je27fJfeM6"
-              target="_blank"
-              rel="noreferrer"
-              className="
-                  inline-flex h-full w-[140px] md:w-[150px]
-                  items-center justify-center
-                  rounded-lg border border-zinc-300
-                  text-sm md:text-lg font-semibold tracking-wide text-white
-                  transition-all duration-300
-                  backdrop-blur-[0px]
-                  hover:backdrop-blur-[3px]
-                "
-            >
-              Book Session
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* STUDENTS & PARENTS SECTION */}
-      <section
-        id="parents"
-        className="scroll-mt-18 md:scroll-mt-26 flex w-full items-center justify-center bg-white"
-      >
-        <div className="w-[85%] max-w-3xl py-14 text-center text-slate-900">
-          <h2 className="text-3xl md:text-[55px] font-semibold">
-            For Students &amp; Parents
-          </h2>
-          <p className="mt-6 text-lg md:text-2xl font-medium leading-snug">
-            I&apos;m not here to cram for the next quiz. I help students
-            actually get good at Spanish: speaking it, understanding it,
-            thinking in it.
-          </p>
-          <p className="mt-4 text-sm md:text-base font-light leading-relaxed">
-            When that clicks, the grades and exam scores take care of
-            themselves. I learned this firsthand: years of French classes never
-            got me speaking, but immersion had me holding conversations in
-            Spanish within months. Lessons are tailored to each student, so
-            they can line up with what&apos;s being covered in class while
-            going further than the textbook.
-          </p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="flex w-full flex-col items-center border-t border-slate-200 pt-5">
-        <div className="flex items-center justify-center">
-          <a
-            href="http://instagram.com/_u/aidmmcmillan/"
-            target="_blank"
-            rel="noreferrer"
-            className="p-2"
-          >
-            <Image
-              src="/images/insta.png"
-              alt="Instagram"
-              width={30}
-              height={30}
-            />
-          </a>
-          <a
-            href="https://facebook.com/aidan.mcmillan.965/"
-            target="_blank"
-            rel="noreferrer"
-            className="p-2"
-          >
-            <Image
-              src="/images/fb.png"
-              alt="Facebook"
-              width={30}
-              height={30}
-            />
-          </a>
-        </div>
+      <footer className="flex w-full flex-col items-center border-t border-slate-200 pt-6">
         <p className="px-4 pb-8 pt-2 text-center text-base leading-relaxed">
-          Author and images by: Aidan McMillan
-          <br />
           Email:{" "}
           <a
             href="mailto:aidmmcmillan@gmail.com"
@@ -333,6 +292,10 @@ export default function HomePage() {
           >
             (860)759-7424
           </a>
+          <br />
+          <span className="text-sm text-slate-500">
+            © 2026 Avíspese Spanish · Photos by Aidan McMillan
+          </span>
         </p>
       </footer>
     </div>
