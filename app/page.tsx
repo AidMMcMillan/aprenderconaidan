@@ -230,7 +230,7 @@ export default function HomePage() {
               </DoorCard>
               <DoorCard
                 colors={{ trim: "#F6C445", door: "#1F5FA8", accent: "#4FB3BF" }}
-                top="pagoda"
+                top="fanlight"
                 title="Conversation Practice"
                 deal="First session: $10"
                 bookingUrl={bookingUrl}
