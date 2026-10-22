@@ -88,29 +88,42 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-[55px] font-semibold">
                 About Me
               </h2>
-              <p className="mt-4 text-sm md:text-base font-light leading-relaxed md:pr-4">
-                My name is Aidan McMillan and I offer private and group Spanish
-                lessons to any level of learner! I&apos;m a Middlebury College
-                graduate now living in New York City. At Middlebury, I worked
-                as a Spanish tutor with the college and volunteered weekly as a
-                medical interpreter for migrant workers in Addison County.
-                I also spent a year working at Literacy Volunteers
-                in New Britain, CT.
-                <br />
-                <br />
-                After various years learning French in school, I found myself
-                frustrated with the way languages were taught in public school.
-                After researching methods to better learn languages, I decided I
-                would learn Spanish on my own. I was surprised that after a few
-                months of this new method of maximum immersion, I could already
-                hold a decent conversation in the language. I soon fell in love
-                with the language and after meeting a language exchange partner
-                from Colombia, picked up the Colombian dialect and idioms. I
-                later studied abroad in Colombia and have been back many times
-                since, further deepening my cultural knowledge! Language is like a key that opens you to a
-                whole new world of culture and ideas. I hope that my methods of
-                teaching and learning can be <b>your</b> key to that world!
-              </p>
+              <div className="mt-4 space-y-4 text-sm md:text-base font-light leading-relaxed md:pr-4">
+                <p>
+                  My name is Aidan McMillan and I offer private and group
+                  Spanish lessons to any level of learner! I&apos;m a
+                  Middlebury College graduate now living in New York City.
+                </p>
+                <p>
+                  At Middlebury, I worked as a Spanish tutor with the college
+                  and volunteered weekly as a medical interpreter for migrant
+                  workers in Addison County. I also spent a year at Literacy
+                  Volunteers in New Britain, CT.
+                </p>
+                <p>
+                  After various years learning French in school, I found myself
+                  frustrated with the way languages were taught in public
+                  school. After researching methods to better learn languages,
+                  I decided I would learn Spanish on my own. I was surprised
+                  that after a few months of maximum immersion, I could already
+                  hold a decent conversation in the language.
+                </p>
+                <p>
+                  I soon fell in love with the language and, after meeting a
+                  language exchange partner from Colombia, picked up the
+                  Colombian dialect and idioms (that&apos;s where this site gets
+                  its name: <i>¡avíspese!</i> is Colombian slang for &ldquo;wise
+                  up&rdquo; or &ldquo;get sharp&rdquo;). I later studied abroad
+                  in Colombia and have been back many times since, further
+                  deepening my cultural knowledge!
+                </p>
+                <p className="text-base md:text-lg font-medium">
+                  Language is like a key that opens you to a whole new world of
+                  culture and ideas. I hope that my methods of teaching and
+                  learning can be <b className="font-bold">your</b> key to that
+                  world!
+                </p>
+              </div>
             </div>
           </div>
 

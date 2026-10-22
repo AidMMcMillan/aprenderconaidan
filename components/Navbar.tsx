@@ -186,13 +186,23 @@ function Logo({
         className="h-10 md:h-14 w-auto"
         priority
       />
-      <span
-        className={[
-          "font-semibold tracking-wide text-lg transition-colors",
-          variant === "light" ? "text-white" : "text-slate-900",
-        ].join(" ")}
-      >
-        AVÍSPESE SPANISH
+      <span className="group/name relative">
+        <span
+          className={[
+            "font-semibold tracking-wide text-lg transition-colors",
+            variant === "light" ? "text-white" : "text-slate-900",
+          ].join(" ")}
+        >
+          AVÍSPESE SPANISH
+        </span>
+        {/* What the name means, on hover (desktop only; About Me explains it too) */}
+        <span
+          role="tooltip"
+          className="pointer-events-none absolute left-0 top-full z-50 mt-2 hidden w-64 rounded-lg bg-slate-900 px-3 py-2 text-sm font-normal leading-snug text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover/name:opacity-100 md:block"
+        >
+          <span className="font-semibold">¡Avíspese!</span> Colombian slang for
+          &ldquo;wise up, get sharp.&rdquo; From <i>avispa</i>, wasp.
+        </span>
       </span>
     </a>
   );
