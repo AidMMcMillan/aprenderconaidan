@@ -4,4 +4,7 @@ export const navItems = [
     { href: "/#lessons", label: "LESSONS" },
   ] as const;
 
-export const bookingUrl = "https://forms.gle/k8jC5A2Je27fJfeM6";
+// Full Google Forms address (not the forms.gle short link): the short link
+// redirects, which traps visitors who press Back after the door animation.
+export const bookingUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfV_eqe9d3xlLMVTUocb7fctFM6nzSuQ36pJXTDejTmC694eg/viewform";
