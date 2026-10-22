@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DoorCard from "@/components/DoorCard";
 import PuertasPaisas from "@/components/PuertasPaisas";
 import { bookingUrl } from "@/config/NavItems";
 
@@ -205,63 +206,47 @@ export default function HomePage() {
               Lessons
             </h2>
 
-            <div className="grid gap-6 md:grid-cols-2 text-left">
-              <div className="flex flex-col rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
-                <h3 className="text-2xl md:text-[28px] font-semibold">
-                  Private Lessons
-                </h3>
-                <p className="mt-1 text-lg md:text-xl">
-                  <span className="font-semibold">$45</span>{" "}
-                  <span className="font-light">/ 1 hour in person</span>
-                  <br />
-                  <span className="font-semibold">$35</span>{" "}
-                  <span className="font-light">/ 1 hour online</span>
-                </p>
-                <p className="mt-1 text-sm md:text-base font-medium text-[#F6C445]">
-                  First lesson: $20
-                </p>
-                <p className="mt-3 flex-1 text-sm md:text-base font-light leading-relaxed">
-                  The full package, at any level. Each lesson mixes teaching
-                  and drills on grammar and vocab with real conversation
-                  practice, all tailored to your goals. Includes everything in
-                  Conversation Practice. Great for students too.
-                </p>
-                <a
-                  href={bookingUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-lg border border-zinc-300 text-sm md:text-base font-semibold tracking-wide text-white transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-[3px]"
-                >
-                  Book Session
-                </a>
-              </div>
-              <div className="flex flex-col rounded-lg border border-zinc-300 bg-black/20 px-6 py-6 backdrop-blur-[3px]">
-                <h3 className="text-2xl md:text-[28px] font-semibold">
-                  Conversation Practice
-                </h3>
-                <p className="mt-1 text-lg md:text-xl">
-                  <span className="font-semibold">$15</span>{" "}
-                  <span className="font-light">/ 30 minutes</span>
-                  <br />
-                  <span className="font-light">In person or online</span>
-                </p>
-                <p className="mt-1 text-sm md:text-base font-medium text-[#F6C445]">
-                  First session: $10
-                </p>
-                <p className="mt-3 flex-1 text-sm md:text-base font-light leading-relaxed">
-                  Just talking, at any level. As we chat I note new vocab and
-                  corrections, we go over them briefly at the end, and I send
-                  them to you afterward so you can review.
-                </p>
-                <a
-                  href={bookingUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-lg border border-zinc-300 text-sm md:text-base font-semibold tracking-wide text-white transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-[3px]"
-                >
-                  Book Session
-                </a>
-              </div>
+            <div className="grid gap-8 md:grid-cols-2 text-left">
+              <DoorCard
+                colors={{ trim: "#2E7D6B", door: "#C0392B", accent: "#F6C445" }}
+                top="frieze"
+                title="Private Lessons"
+                deal="First lesson: $20"
+                bookingUrl={bookingUrl}
+                prices={
+                  <>
+                    <span className="font-semibold">$45</span>{" "}
+                    <span className="font-light">/ 1 hour in person</span>
+                    <br />
+                    <span className="font-semibold">$35</span>{" "}
+                    <span className="font-light">/ 1 hour online</span>
+                  </>
+                }
+              >
+                The full package, at any level. Each lesson mixes teaching and
+                drills on grammar and vocab with real conversation practice,
+                all tailored to your goals. Includes everything in
+                Conversation Practice. Great for students too.
+              </DoorCard>
+              <DoorCard
+                colors={{ trim: "#F6C445", door: "#1F5FA8", accent: "#4FB3BF" }}
+                top="pagoda"
+                title="Conversation Practice"
+                deal="First session: $10"
+                bookingUrl={bookingUrl}
+                prices={
+                  <>
+                    <span className="font-semibold">$15</span>{" "}
+                    <span className="font-light">/ 30 minutes</span>
+                    <br />
+                    <span className="font-light">In person or online</span>
+                  </>
+                }
+              >
+                Just talking, at any level. As we chat I note new vocab and
+                corrections, we go over them briefly at the end, and I send
+                them to you afterward so you can review.
+              </DoorCard>
             </div>
             <p className="mt-6 text-sm md:text-base font-light leading-relaxed">
               Online, or in person in New York City, at your home or a café,
