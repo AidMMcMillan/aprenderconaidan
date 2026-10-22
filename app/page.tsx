@@ -154,13 +154,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PuertasPaisas />
-
-      {/* HOW I TEACH SECTION */}
+      {/* HOW I TEACH SECTION (opens with the street of paisa doors) */}
       <section
         id="how-i-teach"
-        className="scroll-mt-18 md:scroll-mt-26 flex w-full items-center justify-center bg-slate-50"
+        className="scroll-mt-18 md:scroll-mt-26 flex w-full flex-col items-center bg-slate-50"
       >
+        <PuertasPaisas />
         <div className="w-[85%] max-w-5xl py-14 text-center text-slate-900">
           <h2 className="text-3xl md:text-[55px] font-semibold">
             How I Teach

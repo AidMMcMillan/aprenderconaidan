@@ -39,7 +39,7 @@ export default function PuertasPaisas() {
   return (
     <div
       aria-hidden="true"
-      className="flex h-36 md:h-48 w-full justify-center overflow-hidden bg-white"
+      className="flex h-36 md:h-48 w-full justify-center overflow-hidden"
     >
       {Array.from({ length: ROW_LENGTH }, (_, i) => (
         <Facade key={i} index={i} house={houses[i % houses.length]} />
