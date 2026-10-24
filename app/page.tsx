@@ -255,7 +255,7 @@ export default function HomePage() {
                   </>
                 }
               >
-                Just talking, at any level. As we chat I note new vocab and
+                Just talking, for students who are intermediate or higher. As we chat I note new vocab and
                 corrections, we go over them briefly at the end, and I send
                 them to you afterward so you can review.
               </DoorCard>
