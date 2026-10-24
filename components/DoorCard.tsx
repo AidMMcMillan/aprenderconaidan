@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode, type RefObject } from "rea
 
 // A lesson card styled like a painted Antioquian door: a decorative top
 // (carved frieze, pagoda lintel or spoked fanlight), a thick painted frame, the door color
-// behind a raised panel, a brass handle, and a stone step at the bottom.
+// behind a raised panel, a brass knob, and a stone step at the bottom.
 // A fixed width and minimum height keep it door-shaped at every screen size.
 
 const PEEK_MS = 900;
@@ -54,18 +54,18 @@ export default function DoorCard({
           className="group/door relative flex flex-1 flex-col bg-[linear-gradient(90deg,#1c130d,#3b2a1e)] [perspective:1200px]"
         >
           <div
-            className={`relative flex flex-1 flex-col origin-left p-2 md:pr-6 transition-[transform,box-shadow] duration-500 ease-out group-has-[a:hover]/door:[transform:rotateY(-18deg)] group-has-[a:hover]/door:shadow-[12px_8px_24px_rgba(0,0,0,0.45)] group-has-[a:focus-visible]/door:[transform:rotateY(-18deg)] motion-reduce:transition-none ${peeking ? "[transform:rotateY(-18deg)] shadow-[12px_8px_24px_rgba(0,0,0,0.45)]" : ""}`}
+            className={`relative flex flex-1 flex-col origin-left p-2 transition-[transform,box-shadow] duration-500 ease-out group-has-[a:hover]/door:[transform:rotateY(-18deg)] group-has-[a:hover]/door:shadow-[12px_8px_24px_rgba(0,0,0,0.45)] group-has-[a:focus-visible]/door:[transform:rotateY(-18deg)] motion-reduce:transition-none ${peeking ? "[transform:rotateY(-18deg)] shadow-[12px_8px_24px_rgba(0,0,0,0.45)]" : ""}`}
             style={{ background: colors.door }}
           >
-            {/* Brass handle */}
-            <span
-              aria-hidden="true"
-              className="absolute right-1.5 top-1/2 hidden h-12 w-2 md:block -translate-y-1/2 rounded-full bg-[#E8C766] shadow-[inset_-1px_-2px_0_rgba(0,0,0,0.3),1px_1px_2px_rgba(0,0,0,0.35)]"
-            />
             <div
-              className="flex flex-1 flex-col border-4 bg-black/10 px-5 py-5"
+              className="relative flex flex-1 flex-col border-4 bg-black/10 px-5 py-5"
               style={{ borderColor: colors.accent }}
             >
+              {/* Brass knob, just inside the panel border */}
+              <span
+                aria-hidden="true"
+                className="absolute right-1 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_35%_35%,#FFF1B8,#E8C766_45%,#9C7A2B)] shadow-[1px_2px_3px_rgba(0,0,0,0.45)] md:h-4 md:w-4"
+              />
               <h3 className="text-2xl md:text-[28px] font-semibold">{title}</h3>
               <p className="mt-1 text-lg md:text-xl">{prices}</p>
               <p className="mt-2">
@@ -98,7 +98,7 @@ export default function DoorCard({
             target="_blank"
             rel="noreferrer"
             aria-label={`Book a session: ${title}`}
-            className="absolute bottom-8 left-8 right-8 h-11 md:right-12 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="absolute bottom-8 left-8 right-8 h-11 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           />
         </div>
       </div>
